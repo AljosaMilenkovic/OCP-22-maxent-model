@@ -11,7 +11,7 @@ weights <- round(maxent_croatian$weights,4)
 #calculate probabilities
 prob <- predict_probabilities(sa_croatian, weights)
 
-#round the probabilities and convert proportion to percentages
+#round the probabilities and convert proportions to percentages
 prob$predictions$Predicted <- 100*round(prob$predictions$Predicted, 4)
 prob$predictions$Observed <- 100*round(prob$predictions$Observed, 4)
 prob$predictions$Error <- 100*round(prob$predictions$Error, 4)
